@@ -72,4 +72,16 @@ class Session
     {
         return (Session::get('user_logged_in') ? true : false);
     }
+
+     /**
+     * Checks if the user is logged in or not
+     *
+     * @return bool user's login status
+     */
+    public static function userIsAdmin()
+    {
+        return (Session::get('user_account_type') == 9);
+    }
+
+    
 }

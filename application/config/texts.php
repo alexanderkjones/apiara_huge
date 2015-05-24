@@ -70,4 +70,9 @@ return array(
 	"FEEDBACK_FACEBOOK_USERNAME_ALREADY_EXISTS" => "Sorry, but you have already registered here (your Facebook username exists in our database).",
 	"FEEDBACK_FACEBOOK_REGISTER_SUCCESSFUL" => "You have been successfully registered with Facebook.",
 	"FEEDBACK_FACEBOOK_OFFLINE" => "We could not reach the Facebook servers. Maybe Facebook is offline (that really happens sometimes).",
+
+	"FEEDBACK_NOTE_CREATION_FAILED" => "Device creation failed.",
+	"FEEDBACK_NOTE_EDITING_FAILED" => "Device editing failed.",
+	"FEEDBACK_NOTE_DELETION_FAILED" => "Device deletion failed.",
+	"FEEDBACK_DEVICE_REGISTRATION_FAILED" => "Device registration failed.",
 );

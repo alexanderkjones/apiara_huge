@@ -10,9 +10,8 @@
     <!-- wrapper, to center website -->
     <div class="wrapper">
 
-        <!-- logo -->
-        <div class="logo"></div>
-
+        <!-- logo  <div class="logo"></div>-->
+        
         <!-- navigation -->
         <ul class="navigation">
             <li <?php if (View::checkForActiveController($filename, "index")) { echo ' class="active" '; } ?> >
@@ -21,6 +20,10 @@
             <li <?php if (View::checkForActiveController($filename, "overview")) { echo ' class="active" '; } ?> >
                 <a href="<?php echo Config::get('URL'); ?>profile/index">Profiles</a>
             </li>
+
+            
+                
+            
             <?php if (Session::userIsLoggedIn()) { ?>
                 <li <?php if (View::checkForActiveController($filename, "dashboard")) { echo ' class="active" '; } ?> >
                     <a href="<?php echo Config::get('URL'); ?>dashboard/index">Dashboard</a>
@@ -28,6 +31,13 @@
                 <li <?php if (View::checkForActiveController($filename, "note")) { echo ' class="active" '; } ?> >
                     <a href="<?php echo Config::get('URL'); ?>note/index">My Notes</a>
                 </li>
+
+            <?php if (Session::userIsAdmin()) { ?>
+                <li <?php if (View::checkForActiveController($filename, "device")) { echo ' class="active" '; } ?> >
+                    <a href="<?php echo Config::get('URL'); ?>device/">Device Registry</a>
+                </li>
+            <?php } ?> 
+                
             <?php } else { ?>
                 <!-- for not logged in users -->
                 <li <?php if (View::checkForActiveControllerAndAction($filename, "login/index")) { echo ' class="active" '; } ?> >
